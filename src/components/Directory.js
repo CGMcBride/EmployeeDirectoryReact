@@ -7,15 +7,18 @@ export default class Directory extends Component {
         employees: employees.sort((a, b) =>
             (a.name.first > b.name.first ? 1 : -1)
         )
-        // employees: employees
-
     }
+
+    search = event => {
+        let search = event.target.value
+    }
+
     render() {
         return (
             <div>
                 <div>
                     <div className="searchIcon">Search:</div>
-                    <input type="search" name="search" placeholder="search something" />
+                    <input type="search" name="search" placeholder="search something" onChange={event => this.search(event)} />
                 </div>
 
                 <table>
@@ -25,10 +28,8 @@ export default class Directory extends Component {
                                 Picture
                             </th>
                             <th>
-                                First Name
-                            </th>
-                            <th>
-                                Last Name
+                                Name
+                                                            
                             </th>
                             <th>
                                 Email

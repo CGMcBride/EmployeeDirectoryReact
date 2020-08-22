@@ -7,10 +7,8 @@ export default function Tablerow(props) {
                 <img src={props.picture} alt={props.firstname} />
             </td>
             <td>
-                {props.firstname}
-            </td>
-            <td>
-                {props.lastname}
+                {props.firstname} {props.lastname}
+
             </td>
             <td>
                 {props.email}
