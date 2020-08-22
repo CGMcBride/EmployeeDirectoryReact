@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Search from './components/Search'
 import Directory from './components/Directory'
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
       <header>
         <h1>Employee Directory</h1>
       </header>
-      <Search />
       <Directory />
     </div>
   );
