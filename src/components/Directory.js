@@ -4,24 +4,47 @@ import Tablerow from "./Tablerow"
 
 export default class Directory extends Component {
     state = {
-        employees: employees.sort((a, b) =>
-            (a.name.first > b.name.first ? 1 : -1)
-        )
+        employees: employees
     }
 
     search = event => {
         let search = event.target.value
+        console.log(search)
+        let employeefirst = employees.filter(el => el.name.first.toLowerCase().indexOf(search.toLowerCase()) !== -1)
+        this.setState({employees: employeefirst})
+    }
+
+    sortfirstname = () => {
+        this.setState({  
+            employees: employees.sort((a, b) =>
+                (a.name.first > b.name.first ? 1 : -1)
+            )
+        })
+    }
+
+    sortlastname = () => {
+        this.setState({  
+            employees: employees.sort((a, b) =>
+                (a.name.last > b.name.last ? 1 : -1)
+            )
+        })
     }
 
     render() {
         return (
             <div>
                 <div>
-                    <div className="searchIcon">Search:</div>
-                    <input type="search" name="search" placeholder="search something" onChange={event => this.search(event)} />
+                    <div className="searchIcon">Search: 
+                    <input type="search" name="search" placeholder="search employee" onChange={event => this.search(event)} />
+                    <button onClick= {this.sortfirstname}>Sort By First Name</button>
+                    <button onClick = {this.sortlastname}>Sort By Last Name</button>
+
+                    </div>
                 </div>
 
-                <table>
+                <table style={{
+                    tableLayout:"fixed", width: "100%"
+                }}>
                     <thead>
                         <tr>
                             <th>

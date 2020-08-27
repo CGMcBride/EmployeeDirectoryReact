@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Tablerow(props) {
     return (
-        <tr key={props.id}>
+        <tr style={{ textAlign: "center" }} >
             <td>
                 <img src={props.picture} alt={props.firstname} />
             </td>
