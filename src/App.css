@@ -5,3 +5,6 @@ header h1 {
 table tr:nth-child(even) {
 	background-color: lightgray;
 }
+body {
+	background: linear-gradient(to right, #007991, #78ffd6);
+}
