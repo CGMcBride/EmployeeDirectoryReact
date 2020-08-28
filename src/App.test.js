@@ -8,8 +8,10 @@ import App from './App';
 //     expect(linkElement).toBeInTheDocument();
 // });
 
-// test('should check email is valid ', () => {
-//     const {getByText} = render(<App/>);
+test('should check email is valid ', () => {
+    const { container, getByText } = render(<App />);
+
+    expect(getByText())
 
 
-// })
+})
