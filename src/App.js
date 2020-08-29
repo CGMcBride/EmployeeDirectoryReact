@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Employee Directory</h1>
+        <h1> 𝐄𝐦𝐩𝐥𝐨𝐲𝐞𝐞 𝐃𝐢𝐫𝐞𝐜𝐭𝐨𝐫𝐲</h1>
       </header>
       <Directory />
     </div>
