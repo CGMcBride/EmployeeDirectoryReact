@@ -1,3 +1,17 @@
+# Employee Directory
+
+## Synopsis
+
+I have created a employee directory with React, I have broken up my application's user interface into components, to manage compents state and respond to user events.
+
+## User Story
+
+I want to use this app to view employee info and to be able to filter it by first and last name.
+
+## Usage Context
+
+An employee or manager would benefit from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
